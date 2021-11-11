@@ -1,23 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import Discovery from './Discovery/Discovery';
+import SpatialNavigation from 'react-js-spatial-navigation';
+
 
 function App() {
+  const hideMenuHandler = (event, key = true) => {
+    const keys = [8, 27, 403, 461];
+    if (keys.includes(event.keyCode) || key === false){
+      window.history.back();
+    }
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SpatialNavigation className="App">
+        <Discovery hideMenu={hideMenuHandler}/>
+      </SpatialNavigation>
     </div>
   );
 }

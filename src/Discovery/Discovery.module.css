@@ -1,0 +1,254 @@
+.Item {
+    width: 235px;
+    height: 150px;
+    background-color: #f2f2f2;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    margin: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform .3s ease;
+}
+
+.Item:focus {
+    box-sizing: border-box;
+    outline: none;
+    border: 4px solid #DA2A1D;
+    transform: scale(1.1);
+    transition: transform .4s ease;
+}
+
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOutFromRight {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+.Title {
+    color: #1a1a1a;
+    margin: 50px;
+    font-size: 48px;
+    margin-top: 120px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.Back {
+    height: 64px;
+    width: 60px;
+    position: absolute;
+    left: 100px;
+    top: 250px;
+    outline: none;
+}
+
+.LeftPanel {
+    background-color: #f2f2f2;
+    font-size: 24px;
+    text-align: left;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    width: 25%;
+    min-width: 250px;
+    outline: none;
+    padding: 20px;
+    margin-right: 25px;
+}
+
+.MidPanel {
+    background-color: #f2f2f2;
+    font-size: 24px;
+    text-align: left;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    width: 40%;
+    min-width: 350px;
+    outline: none;
+    padding: 20px;
+    transition: max-height 0.3s;
+}
+
+.RightPanel {
+    background-color: #f2f2f2;
+    font-size: 24px;
+    text-align: left;
+    box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.5);
+    width: 25%;
+    min-width: 250px;
+    outline: none;
+    padding: 16px;
+    margin-left: 25px;
+    transition: transform ease-out 0.3s, opacity 0.3s;
+    position: relative;
+}
+
+.Show {
+    /*visibility: visible;*/
+    opacity: 1;
+    transform: translateX(0%);
+}
+
+.Hide {
+    transform: translateX(-100%);
+    opacity: 0;
+    z-index: -1;
+}
+
+.ServiceWrap {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    height: 70%;
+}
+
+.ErrorWrap {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 24px;
+}
+
+.Frame {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.Row {
+    padding: 2px 4px;
+    border-bottom: 1px solid #979797;
+    transition: #f2f2f2 .1s linear;
+    border-radius: 2px;
+}
+
+.Row:focus,
+.Row:last-child:focus,
+.InfoRow:focus,
+.InfoRow:last-child:focus {
+    box-sizing: border-box;
+    outline: none;
+    border-right: 4px solid #DA2A1D;
+    background-color: #FFF;
+}
+
+.DetailRow,
+.InfoRow,
+.InfoRow:last-child {
+    padding: 2px 4px;
+    border-radius: 2px;
+    transition: #f2f2f2 .1s linear;
+}
+
+.DetailRow:focus {
+    outline: none;
+    border-right: 4px solid #DA2A1D;
+    background-color: #FFF;
+}
+
+
+.Row:last-child,
+.InfoRow {
+    border: none;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.Address {
+    margin: 4px auto;
+    color: #DA2A1D;
+    padding: 0 10px;
+}
+
+.Name,
+.Type {
+    margin: 4px 2px;
+    padding: 0 10px;
+}
+
+.Type {
+    color: #979797;
+}
+
+.InfoWrap {
+    margin-top: 15px;
+}
+
+.InfoHead {
+    font-size: 20px;
+    color: #DA2A1D;
+    margin: 4px 2px;
+}
+
+.InfoValue {
+    font-size: 20px;
+    margin: 4px 2px;
+}
+
+.BtnWrap {
+    /*position: absolute;
+    bottom: 0;
+    left: 0;*/
+    width: 100%;
+    height: 65px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Btn {
+    background-color: #DA2A1D;
+    color: #FFFFFF;
+    padding: 10px 5px;
+    text-align: center;
+    border-radius: 2px;
+    margin: 0 10px;
+    width: 100%;
+}
+
+
+.Btn:focus {
+    box-sizing: border-box;
+    outline: none;
+    transform: scale(1.02);
+    transition: transform .4s ease;
+    font-size: 30px;
+}
+
+.TextCenter {
+    text-align: center;
+    font-size: 28px;
+}
+
+.InfoTitle {
+    font-size: 24px;
+    color: #999999;
+    margin: 0;
+}
+
+.Item img {
+    height: 60px;
+    margin: 15px;
+}
+
+.Item p {
+    font-size: 24px;
+    margin: 0;
+    color: #1a1a1a;
+}
